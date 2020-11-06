@@ -1,4 +1,5 @@
 package core;
+
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
@@ -48,9 +49,7 @@ public class Base {
 	public static String getBrowserName() {
 		String browserName = properties.getProperty("browser");
 		return browserName;
-		
-		
-	}
+		}
 	/**
 	 * this method will return url of application we use for this FrameWork.
 	 * @return

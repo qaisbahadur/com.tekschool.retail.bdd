@@ -1,74 +1,70 @@
-$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("Features/DataBaseFeature.feature");
+$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("Features/RetailTestScenarios.feature");
 formatter.feature({
   "line": 1,
-  "name": "Database SQL query feature",
+  "name": "Retail Test Scenarios",
   "description": "",
-  "id": "database-sql-query-feature",
+  "id": "retail-test-scenarios",
   "keyword": "Feature"
 });
 formatter.before({
-  "duration": 7077965600,
+  "duration": 6881934000,
+  "status": "passed"
+});
+formatter.background({
+  "line": 3,
+  "name": "",
+  "description": "",
+  "type": "background",
+  "keyword": "Background"
+});
+formatter.step({
+  "line": 4,
+  "name": "User is on Retail website",
+  "keyword": "Given "
+});
+formatter.match({
+  "location": "LoginTestStepDefinition.user_is_on_Retail_website()"
+});
+formatter.result({
+  "duration": 7917490300,
   "status": "passed"
 });
 formatter.scenario({
-  "line": 4,
-  "name": "Execute all information from Actor Table",
+  "line": 31,
+  "name": "Product from Shopping Cart",
   "description": "",
-  "id": "database-sql-query-feature;execute-all-information-from-actor-table",
+  "id": "retail-test-scenarios;product-from-shopping-cart",
   "type": "scenario",
   "keyword": "Scenario",
   "tags": [
     {
-      "line": 3,
-      "name": "@sqlquery"
+      "line": 30,
+      "name": "@RemoveProduct"
     }
   ]
 });
 formatter.step({
-  "line": 5,
-  "name": "User connects to PostgreSQL",
-  "keyword": "Given "
-});
-formatter.step({
-  "line": 6,
-  "name": "User sends \"select * from public.actor\"",
+  "line": 33,
+  "name": "User click on Shopping cart menu",
   "keyword": "When "
 });
 formatter.step({
-  "line": 7,
-  "name": "User should get all information from that table",
+  "line": 34,
+  "name": "User see list of item is displayed",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 35,
+  "name": "User click on Red X button",
   "keyword": "Then "
 });
 formatter.match({
-  "location": "SqlQueryStepDefinition.user_connects_to_PostgreSQL()"
+  "location": "RemoveItemStepDefinition.user_click_on_Shopping_cart_menu()"
 });
 formatter.result({
-  "duration": 273143800,
+  "duration": 5542478000,
   "status": "passed"
 });
 formatter.match({
-  "arguments": [
-    {
-      "val": "select * from public.actor",
-      "offset": 12
-    }
-  ],
-  "location": "SqlQueryStepDefinition.user_sends(String)"
-});
-formatter.result({
-  "duration": 19085000,
-  "status": "passed"
-});
-formatter.match({
-  "location": "SqlQueryStepDefinition.user_should_get_all_information_from_that_table()"
-});
-formatter.result({
-  "duration": 434800,
-  "error_message": "java.lang.NullPointerException\r\n\tat utilities.DataBaseUtility.returnResult(DataBaseUtility.java:65)\r\n\tat stepDefinitions.SqlQueryStepDefinition.user_should_get_all_information_from_that_table(SqlQueryStepDefinition.java:20)\r\n\tat ✽.Then User should get all information from that table(Features/DataBaseFeature.feature:7)\r\n",
-  "status": "failed"
-});
-formatter.after({
-  "duration": 791402000,
-  "status": "passed"
-});
+  "location": "RemoveItemStepDefinition.user_see_list_of_item_is_displayed()"
 });

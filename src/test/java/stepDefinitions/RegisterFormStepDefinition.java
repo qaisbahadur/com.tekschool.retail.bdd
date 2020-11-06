@@ -19,6 +19,8 @@ public class RegisterFormStepDefinition extends Base {
 			Logger.info("user clicked on Register");
 		} catch (NoSuchElementException e) {
 			e.printStackTrace();
+			
+			WebDriverUtility.wait(10000);
 		}
 	}
 	@When("^User fill out Register form with below information$")
